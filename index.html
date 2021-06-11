@@ -2,6 +2,7 @@
 <html lang="ko">
   <head>
     <style>
+      /* #region 건들지 마시오*/
       @charset "utf-8";
       @import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
 
@@ -195,15 +196,12 @@
         overflow: hidden;
         height: 100%;
       }
-
+      /* #endregion 건들지 마시오*/
+      
       #wrap {
         width: 100%;
         height: 100%;
         padding-right: 180px;
-      }
-      #container {
-        width: 100px;
-        height: 100%;
       }
       #wrap > h1 {
         font-size: 0px;
@@ -282,37 +280,52 @@
       footer address {
         padding: 0px 0px 15px 0px;
       }
+      footer > a {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background-size: cover;
+        top: -30px;
+        position: absolute;
+        transition: 1s;
+      }
       footer > a.face {
         background: url(./images/social_b_facebook.png) no-repeat;
         right: 18px;
+      }
+      footer > a.face:hover {
+        background-image: url(./images/social_b_facebook_hover.png);
       }
       footer > a.insta {
         background: url(./images/social_b_instar.png) no-repeat;
         right: 48px;
       }
-      footer > a {
-        display: block;
-        width: 16px;
-        height: 16px;
-        position: absolute;
-        top: -31px;
-        transition: 1s;
+      footer > a.insta:hover {
+        background-image: url(./images/social_b_instar_hover.png);
       }
       #container {
         width: 100%;
         height: 100%;
         position: relative;
+        max-width: 2400px;
+      }
+      .content {
+        height: 100%;
+        width: 25%;
+        position: absolute;
       }
       #container .content {
         width: 25%;
         height: 100%;
         position: absolute;
+        transition: 1s;
       }
-      #container .content:before, #container.content:after {
-        content:"";
+      #container .content:before,
+      #container .content:after {
+        content: "";
         display: block;
         position: absolute;
-      } 
+      }
       #container .content:before {
         width: 1px;
         height: 100%;
@@ -321,15 +334,50 @@
         top: 0;
         z-index: 4;
       }
-      #container.content:after {
+      #container .content:after {
         left: 30px;
         top: 180px;
         font-size: 25px;
         font-weight: 700;
         color: orange;
       }
+      #container .content h2 {
+        opacity: 0;
+      }
+      #container .content.this {
+        width: 100%;
+        left: 0 !important;
+      }
+      #container .content.prev {
+        width: 100%;
+        left: -100% !important;
+      }
+      #container .content.next {
+        width: 100%;
+        left: 100% !important;
+      }
+      #container .content.this:before, #container .content.this:after, 
+      #container .content.this .conbox:before {
+        opacity: 0;
+      }
+      .content#menu1 {
+        left: 0%;
+        background-image: url(./images/content_bg1.png);
+      }
+      .content#menu2 {
+        left: 25%;
+        background-image: url(./images/content_bg2.png);
+      }
+      .content#menu3 {
+        left: 50%;
+        background-image: url(./images/content_bg3.png);
+      }
+      .content#menu4 {
+        left: 75%;
+        background-image: url(./images/content_bg4.png);
+      }
       #container #menu1:after {
-        content: "회사소개";
+        content: "학교소개";
       }
       #container #menu2:after {
         content: "과목소개";
@@ -340,21 +388,45 @@
       #container #menu4:after {
         content: "Contact Us";
       }
-      #container #menu1 {
-        left: 0%;
-        background: url(./images/content_bg1.png) repeat;
+      #container .content .conbox:before {
+        content: "";
+        display: block;
+        position: absolute;
       }
-      #container #menu2 {
-        left: 25%;
-        background: url(./images/content_bg2.png) repeat;
+      #container #menu1 .conbox:before {
+        background: url(./images/main_ico1.png) no-repeat;
+        width: 350px;
+        height: 260px;
+        right: -10px;
+        top: 130px;
+        background-size: 100%;
       }
-      #container #menu3 {
-        left: 50%;
-        background: url(./images/content_bg3.png) repeat;
+
+      #container #menu2 .conbox:before {
+        background: url(./images/main_ico2.png) no-repeat;
+        width: 180px;
+        height: 470px;
+        right: -30px;
+        top: 180px;
+        background-size: 100%;
       }
-      #container #menu4 {
-        left: 75%;
-        background: url(./images/content_bg4.png) repeat;
+
+      #container #menu3 .conbox:before {
+        background: url(./images/main_ico3.png) no-repeat;
+        width: 270px;
+        height: 310px;
+        right: -60px;
+        top: 30px;
+        background-size: 100%;
+      }
+
+      #container #menu4 .conbox:before {
+        background: url(./images/main_ico4.png) no-repeat;
+        width: 350px;
+        height: 400px;
+        right: -170px;
+        top: 100px;
+        background-size: 100%;
       }
     </style>
   </head>
@@ -367,14 +439,18 @@
         </strong>
         <nav>
           <ul>
-            <li>
-              <a href="">학교소개</a>
+            <li data-rol="menu1">
+              <a href="#">학교소개</a>
             </li>
-            <li>
-              <a href="">수업소개</a>
+            <li data-rol="menu2">
+              <a href="#">수업소개</a>
             </li>
-            <li><a href="">FAQ</a></li>
-            <li><a href="">Contact Us</a></li>
+            <li data-rol="menu3">
+              <a href="#">FAQ</a>
+            </li>
+            <li data-rol="menu4">
+              <a href="#">Contact Us</a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -398,10 +474,13 @@
       </section>
       <footer>
         <address>경기도 안산시 단원구 와동 사세충열로 94, 한국디지털미디어고등학교</address>
-        <p>copyright(c) sldkfj</p>
+        <p>copyright(c)</p>
         <a href="http://facebook.com/dimigo" class="face" title="페이스북으로 이동"></a>
         <a href="http://www.instagram.com/dimigo" class="insta" title="인스타그램으로 이동"></a>
       </footer>
     </section>
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./js/ui.js"></script>
+	<script data-cfasync="false" type="text/javascript" src="./js/form-submission-handler.js"></script>
   </body>
 </html>
