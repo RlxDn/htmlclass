@@ -261,6 +261,7 @@
         position: absolute;
         right: 35px;
         top: 75px;
+        cursor: pointer;
       }
       header .logo_box img {
         width: 100px;
@@ -307,7 +308,6 @@
         width: 100%;
         height: 100%;
         position: relative;
-        max-width: 2400px;
       }
       .content {
         height: 100%;
@@ -344,9 +344,38 @@
       #container .content h2 {
         opacity: 0;
       }
+      #container .content.this h2 {
+        height: auto;
+        padding: 30px 0px 20px 50px;
+        color: black;
+        position: relative;
+        background: white;
+        font-size: 28px;
+        font-weight: 400;
+        opacity: 1;
+      }
+      #container .content.this h2:after {
+        content: "";
+        width: 100%;
+        height: 8px;
+        background: #E83C77;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+      #container .content .conbox .content_wrap {
+        opacity: 0;
+      }
+      #container .content.this .conbox .content_wrap {
+        padding: 30px 50px 50px 50px;
+        opacity: 1;
+      }
       #container .content.this {
         width: 100%;
         left: 0 !important;
+        height: 100%;
+        overflow: hidden;
+        overflow-y: auto;
       }
       #container .content.prev {
         width: 100%;
@@ -359,6 +388,56 @@
       #container .content.this:before, #container .content.this:after, 
       #container .content.this .conbox:before {
         opacity: 0;
+        transition: .6s;
+        transition-delay: .3s;
+      }
+      #container .content.prev:before {
+        opacity: 0;
+        transition: all .6s;
+        transition-delay: .3s;
+      }
+      #container .content.prev:after {
+        opacity: 0;
+        transition: all .6s;
+        transition-delay: .3s;
+      }
+      #container .content.prev .conbox:before {
+        opacity: 0;
+        transition: all .6s;
+        transition-delay: .3s;
+      }
+      #container .content.next:before {
+        opacity: 0;
+        transition: all .6s;
+        transition-delay: .3s;
+      }
+      #container .content.next:after {
+        opacity: 0;
+        transition: all .6s;
+        transition-delay: .3s;
+      }
+      #container .content.next .conbox:before {
+        opacity: 0;
+        transition: all .6s;
+        transition-delay: .3s;
+      }
+      #container .content.this .conbox:before {
+        transform: translate3d(300px, 0,0);
+      }
+      #container .content.this:after {
+        transform: translate3d(300px, 0,0);
+      }
+      #container .content.this h2 {
+        height: auto;
+        padding: 30px 0 20px 50px;
+        color: black;
+        position: relative;
+        background: white;
+        font-size: 28px;
+        font-weight: 400;
+        opacity: 1;
+        transition: all .6s;
+        transition-delay: 1.2s; 
       }
       .content#menu1 {
         left: 0%;
@@ -428,6 +507,52 @@
         top: 100px;
         background-size: 100%;
       }
+      #container .content {
+        top: 100%;
+        transition: all .8s;
+      }
+      #container .content:nth-of-type(2) {
+        transition-delay: .3s;
+      }
+      #container .content:nth-of-type(3) {
+        transition-delay: .6s;
+      }
+      #container .content:nth-of-type(4) {
+        transition-delay: .8s;
+      }
+      #container.start .content {
+        top: 0;
+      }
+      .pargrph_tit {
+        margin-bottom: 50px;
+        font-size: 24px;
+        color: white;
+        position: relative;
+      }
+      .pargrph_tit:after {
+        content:"";
+        display: block;
+        width: 30px;
+        height: 8px;
+        background: magenta;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+      }
+      .text_box h4 {
+        font-size: 40px;
+        color: yellow;
+        font-weight: 700;
+      }
+      .text_box p {
+        margin-bottom: 50px;
+        color: chartreuse;
+        line-height: 20px; 
+      }
+      #container .content.this .conbox {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
     </style>
   </head>
   <body>
@@ -441,6 +566,17 @@
           <ul>
             <li data-rol="menu1">
               <a href="#">학교소개</a>
+              <div class="conbox">
+                <section class="content_wrap">
+                  <h3 class="pargrph_tit">학교소개 상세</h3>
+                  <div class="pargrph">
+                    <div class="text_box">
+                      <h4>우리 학교를 소개합니다.</h4>
+                      <p>우리 학교는 역사와 전통에 빛나지는 않지만 경기도 안산 꽃빛산 자락에 위치하여 공기도 맑고, 새도 재잘거리고, 들꽃도 피고</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
             </li>
             <li data-rol="menu2">
               <a href="#">수업소개</a>
