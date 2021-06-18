@@ -16,7 +16,6 @@ $(document).ready(function(){
 	$(".logo_box").click(function(){
 		$("nav li").removeClass("on");
 		$(".content").removeClass("prev this next");
-		$("#container").css("max-width", "1200px");
 	});
 	//롤링배너 왼쪽
 	$(".roll_left").click(function(){
