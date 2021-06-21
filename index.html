@@ -9,7 +9,7 @@
         html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, button, abbr, acronym, address, code, del, 
         dfn, em, img, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, 
         td, hr{margin:0;padding:0;font-size:100%;box-sizing: border-box;}
-        body{height:100%;min-height:100%;font-family:'Noto Sans Korean','Malgun Gothic','맑은고딕','돋움',dotum, sans-serif;font-size:16px;color:#737373;line-height:1.5;background:url(../images/content_bg4.png) repeat;}
+        body{height:100%;min-height:100%;font-family:'Noto Sans Korean','Malgun Gothic','맑은고딕','돋움',dotum, sans-serif;font-size:16px;color:#737373;line-height:1.5;}
         h1, h2, h3, h4, h5, h6 {font-weight:normal}
         ol, ul, li {list-style:none}
         table {width:100%; border-collapse:collapse;border-spacing:0}
@@ -33,8 +33,7 @@
 
         #wrap{ width:100%; height:100%; padding-right:180px; }
         #wrap > h1{font-size:0;}
-        #wrap header {width: 180px; height: 100%; position: fixed; right:0px; top: 0px;
-         background:url(./images/menu_bg1.png) repeat-y; z-index:11;}
+        #wrap header {width: 180px; height: 100%; position: fixed; right:0px; top: 0px; z-index:11; background: #2e2e2e}
         #wrap header nav{width:100%; height:100%;}
         #wrap header nav ul{width:100%; height:100%;display:flex; flex-direction:column; 
             justify-content:center;}
@@ -66,7 +65,7 @@
         #container .content {width:25%; height:100%; position:absolute; transition:all .5s;}
 
         #container .content:before, #container .content:after{content:""; display:block; position:absolute;}
-        #container .content:before{width:1px; height:100%; background:white; left: 0; top:0; z-index:4;}
+        #container .content:before{width:1px; height:100%;  left: 0; top:0; z-index:4;}
         #container .content:after{left:30px; top: 180px; font-size:25px; font-weight:700; color: orange;}
 
         #container #menu1:after{content:"학교소개";}
@@ -75,17 +74,13 @@
         #container #menu4:after{content:"Contact Us";}
 
         #container .content .conbox:before{content:""; display:block; position: absolute;}
-        #container #menu1 .conbox:before{background:url(./images/main_ico1.png) no-repeat; 
-            width:350px; height:260px; right:-10px; top:130px; background-size:100%;}
+        #container #menu1 .conbox:before{width:350px; height:260px; right:-10px; top:130px; background-size:100%;}
         
-        #container #menu2 .conbox:before{background:url(./images/main_ico2.png) no-repeat; 
-            width:180px; height:470px; right:-30px; top:180px; background-size:100%;}
+        #container #menu2 .conbox:before{width:180px; height:470px; right:-30px; top:180px; background-size:100%;}
         
-        #container #menu3 .conbox:before{background:url(./images/main_ico3.png) no-repeat; 
-            width:270px; height:310px; right:-60px; top:30px; background-size:100%;}
+        #container #menu3 .conbox:before{width:270px; height:310px; right:-60px; top:30px; background-size:100%;}
         
-        #container #menu4 .conbox:before{background:url(./images/main_ico4.png) no-repeat; 
-            width:350px; height:400px; right:-170px; top:100px; background-size:100%;}                                    
+        #container #menu4 .conbox:before{width:350px; height:400px; right:-170px; top:100px; background-size:100%;}                                    
 
         #container .content h2 {opacity:0;}
         
@@ -118,13 +113,10 @@
         #container .content.this h2 {height:auto; padding:30px 0 20px 50px; color:black; position:relative; background:white; 
         font-size:28px; font-weight: 400; opacity:1; transition:all .6s; transition-delay: 1.2s;}
 
-        #container #menu1{left:0%; background:url(./images/content_bg1.png) repeat;}
-        #container #menu2{left:25%; background:url(./images/content_bg2.png) repeat;}
-        #container #menu3{left:50%; background:url(./images/content_bg3.png) repeat;}
-        #container #menu4{left:75%; background:url(./images/content_bg4.png) repeat;}
-
-        /* p138 03.컨텐츠영역 표시, 종으로 떨어지는 애니메이션 구현,  05.회사소개 , FAQ 까지 */
-        /* 과목소개, Contact Us + a 는 컨텐츠를 채움, 메뉴 변경 ok , 내용 추가 ok, 사이트 임의변경 ok  */
+        #container #menu1{left:0%; background: #14535c;}
+        #container #menu2{left:25%; background: #4ecdc4;}
+        #container #menu3{left:50%; background: #f7fff7;}
+        #container #menu4{left:75%; background: #ff6b6b;}
         
         #container .content{top:100%; transition:all .8s;}
         #container .content:nth-of-type(2){transition-delay:.3s;}
@@ -139,26 +131,18 @@
         .text_box p{margin-bottom: 50px; color:chartreuse; line-height: 20px;}
         #container .content.this .conbox{max-width:1100px; margin: 0 auto;}
 
-        /* P228 FAQ 만들기, Contact Us , 구글API 통한 메일 전송 */
         .tit_faq {color: white;}
-        .tit_faq strong {font-size: 25px; padding-right: 10px;}
+        .tit_faq strong {font-size: 25px; padding-right: 10px;}ff6b6b
         .tit_faq span {font-size: 14px; font-weight: 400;}
-        .tit_faq:before {content: ""; display: block; position: absolute; width: 120px; height: 150px; background: url('./images/faq_boy.png') no-repeat;
-        right: 0px; top: 36px;}
+        .tit_faq:before {content: ""; display: block; position: absolute; width: 120px; height: 150px; right: 0px; top: 36px;}
 
         .accordio_box {margin-top: 170px;}
         .accordio_box ol li {width: 100%; background: white; border-top: 4px solid red;}
-        .accordio_box ol li h4 {display: block; padding: 0px 20px 20px 0px; margin: 20px 20px 0px 30px; cursor: pointer; background: url('./images/select_bullet_up.png') no-repeat; right: 11px;
+        .accordio_box ol li h4 {display: block; padding: 0px 20px 20px 0px; margin: 20px 20px 0px 30px; cursor: pointer; right: 11px;
         font-weight: 400; color: gray;}
         .accordio_box ol li h4 span {display: inline-block; margin-right: 10px; font-weight: 900;}
         .accordio_box ol li p {height: 0; visibility: hidden; opacity: 0;}
         .accordio_box ol li.on p {height: auto; padding: 30px 100px 70px 200px; background-color: white; background-size: 100px; background-repeat: no-repeat; visibility: visible; opacity: 1;}
-        .accordio_box ol li:nth-of-type(1) p {background-image: url('./images/board_boy.png'); background-position: 40px -1;}
-        .accordio_box ol li:nth-of-type(2) p {background-image: url('./images/read_boy.png'); background-position: 40px -1;}
-        .accordio_box ol li:nth-of-type(3) p {background-image: url('./images/shopping_boy.png'); background-position: 40px -1;}
-        .accordio_box ol li:nth-of-type(4) p {background-image: url('./images/meeting_boy.png'); background-position: 40px -1;}
-        
-        .accordio_box ol li.on h4 {background: url('./images/select_bullet_down.png') no-repeat; right: 11px;}
         
         #menu4 .content_wrap{width:800px; margin:100px auto 0 auto; padding:30px; background:rgba(255,255,255, 0.7); border-radius:5px;}
         #menu4 .content_wrap .form_tit{margin-bottom:40px; font-size:24px; font-weight:700; color:#ea657b;}
@@ -171,17 +155,16 @@
         .formlist ul li .textbox{width:100%; height:200px; border:solid 1px #ddd; background:#fff;}
         .formlist ul li input,.formlist ul li textarea{width:100%; height:100%;}
         .btn_box{width:100%; margin-top:20px; text-align:center;}
-        /*폼 전송 완료 팝업*/
+
         .thankyou_message{position:fixed; top:0; bottom:0; left:0; right:0; background:rgba(0, 0, 0, 0.7); z-index:999; display:none;}
         .thankyou_message > section > h1{color:#59c3c3; font-size:25px; font-weight:700; margin-bottom:20px;}
-        .thankyou_message > section{width:550px; margin:10% auto; padding:20px; border-radius:5px; background:url(../images/contact_pop.jpg) no-repeat #fff right bottom; background-size:240px; color:#3c4147;}
-        /*공통으로 사용되는 스타일 */
-        /*블릿*/
+        .thankyou_message > section{width:550px; margin:10% auto; padding:20px; border-radius:5px; background-size:240px; color:#3c4147;}
+
         .bullet_list{margin-top:20px;}
         .bullet_list li{margin-bottom:5px; padding-left:10px; font-size:12px; color:#3c4147; position:relative;}
         .bullet_list li:after{content:"";
         display:block; width:3px; height:3px; border-radius:50%; background:#3c4147; position:absolute; left:0; top:8px;}
-        /*버튼*/
+
         .commbtn{width:150px; display:inline-block; height:35px; margin-top:20px; font-size:15px; line-height:35px; border-radius:5px; text-align:center;}
         .commbtn.pink{background:#f92d68; color:#fff;}
         .commbtn.gray{background:#3c4147; color:#fff;}
@@ -326,7 +309,7 @@
                 <div class="conbox">
                   <section class="content_wrap">
                     <h3 class="form_tit">우리에게 연락하는 방법</h3>
-                    <form class="gform" method="POST" action="https://script.google.com/a/dimigo.hs.kr/macros/s/AKfycbyy3T3Llb5UWmd5Ni1O8Md0JK1WgqML8fdLGTod/exec" name="contactus">
+                    <form class="gform" method="POST" action="https://script.google.com/a/dimigo.hs.kr/macros/s/AKfycbzZSaGM2Fh-iOtvyuvJ_mUv8M1pSMzEASz3tWyg/exec" name="contactus">
                       <fieldset>
                         <legend>Contact Us</legend>
                         <div class="formlist">
@@ -357,8 +340,8 @@
             </section>
         </section>
         <footer>
-            <address>경기도 안산시 단원구 사세충열로00</address>
-            <p>copyright(c) 20asdfasdf</p>
+            <address>경기도 안산시 단원구 사세충열로</address>
+            <p>copyright(c) 2021 C01iN.com</p>
             <a href="http://facebook.com/dimigo" class="face" title="페이스북으로 이동"></a>
             <a href="http://www.instagram.com/dimigo" class="instar" title="인스타그램으로 이동"></a>
         </footer>
