@@ -4,6 +4,12 @@
   <link type="text/css" rel="stylesheet" href="./css/contact.css"/>
 </head>
 <body>
-  
+  <div>
+    <nav-bar />
+  </div>   
+  <script type="module">
+    import NavBar from "./navbar.js";
+    customElements.define("nav-bar", NavBar);
+  </script>
 </body>
 </html>

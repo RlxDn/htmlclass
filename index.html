@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link type="text/css" rel="stylesheet" href="./css/index.css"/>
 </head>
 <body>
-    <div>
-      <nav-bar />
-    </div>   
-    <script type="module">
-      import NavBar from "./navbar.js";
-      customElements.define("nav-bar", NavBar);
-    </script>
+  <div>
+    <nav-bar />
+  </div>  
+  <div class="container">
+    <div class="title">HARMONY</div>
+    <div class="image_con">
+      <img class="painting" src="./images/cafeterrace.jpg" />
+      <div class="pnt_name">Cafe Terrace at Night</div>
+      <div class="pnt_author">Vincent Van Gogh</div>
+    </div>
+  </div>
+  <div class="triangle_l"></div>
+  <div class="triangle_b"></div>
+  <div class="triangle_r"></div>
+  <script type="module">
+    import NavBar from "./navbar.js";
+    customElements.define("nav-bar", NavBar);
+  </script>
 </body>
 </html>
