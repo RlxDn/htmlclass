@@ -6,3 +6,9 @@ body {
   padding: 0;
   background: #b7b7a4;
 }
+.accordio_box {width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 50px;}
+.accordio_box ol {margin-bottom: 200px;}
+.accordio_box ol li {width:1000px; background:white; border-top:4px solid orange; list-style: none;}
+.accordio_box ol li h4 {display:block; padding:0px 20px 20px 0px; margin:20px 20px 0 30px; right:11px; font-weight: 400; color:black;}
+.accordio_box ol li h4 span{display: inline-block; margin-right: 10px; font-weight: 900;}
+.accordio_box ol li p {display: block; padding:0px 0px 20px 0px; margin:0px 20px 0 60px; font-weight: 400; color:black;}

@@ -5,10 +5,10 @@ class NavBar extends LitElement {
     return css`
       @import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
 
-      html, body{width: 100%; height: 100%; margin:0; padding:0;}
+      html, body{width: 100%; margin:0; padding:0;}
       body{height:100%;min-height:100%;font-family:'Noto Sans Korean'}
 
-      nav {width: 100%; height: 100%; background: #2e2e2e; display: flex; align-items: center;}
+      nav {width: 100%; height: 50px; background: #2e2e2e; display: flex; align-items: center; position: fixed;}
       nav ul {width: 100%; display: flex; justify-content: center; list-style: none;}
       nav ul li {margin-right: 30px;}
       a{text-decoration: none; color: gray;}
